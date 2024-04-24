@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.background-video video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.card h1 {
+  font-size: 160px;
+  text-transform: capitalize;
+  color: whitesmoke;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s;
+}
+
+.card h1:hover {
+  -webkit-text-stroke: 2px whitesmoke;
+  color: transparent;
+}
+
+button {
+  padding: 10px 45px;
+  border: 2px solid white;
+  color: whitesmoke;
+  font-size: 18px;
+  transition: all 0.4s;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+}
+
+button:hover {
+  background: whitesmoke;
+  color: black;
+}
+
+.card {
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .card h1 {
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card h1 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card h1 {
+    font-size: 50px;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .background-video video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .background-video video {
+    width: auto;
+    height: 100%;
+  }
+}
